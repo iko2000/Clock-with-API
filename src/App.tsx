@@ -36,7 +36,7 @@ function App() {
    }
 
   useEffect(() => {
-    axios(`http://worldtimeapi.org/api/ip`)
+    axios(`https://worldtimeapi.org/api/ip`)
     .then((response) => response.data)
     .then((data) => {
       console.log(data)
