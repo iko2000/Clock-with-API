@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Clock-with-API/static/css/main.8e5d3cee.css",
-    "main.js": "/Clock-with-API/static/js/main.5402b9d1.js",
+    "main.css": "/Clock-with-API/static/css/main.00bbbb31.css",
+    "main.js": "/Clock-with-API/static/js/main.9c30e60c.js",
     "static/media/nighttime.jpg": "/Clock-with-API/static/media/nighttime.aa5161f57be5fd66b6a2.jpg",
     "static/media/daytime.jpg": "/Clock-with-API/static/media/daytime.22955f116d799eadf917.jpg",
     "static/media/SpaceMono-Bold.ttf": "/Clock-with-API/static/media/SpaceMono-Bold.2d0dbf42750207f78ffa.ttf",
@@ -10,11 +10,11 @@
     "static/media/moon.svg": "/Clock-with-API/static/media/moon.83b9f0dbe53bfaab2e1c6dc344545e9c.svg",
     "static/media/arrowup.svg": "/Clock-with-API/static/media/arrowup.9f27dbc98aef9217ffedf9388f4088d5.svg",
     "static/media/arrowdown.svg": "/Clock-with-API/static/media/arrowdown.4d330a30a2190ce71512b306095fbf41.svg",
-    "main.8e5d3cee.css.map": "/Clock-with-API/static/css/main.8e5d3cee.css.map",
-    "main.5402b9d1.js.map": "/Clock-with-API/static/js/main.5402b9d1.js.map"
+    "main.00bbbb31.css.map": "/Clock-with-API/static/css/main.00bbbb31.css.map",
+    "main.9c30e60c.js.map": "/Clock-with-API/static/js/main.9c30e60c.js.map"
   },
   "entrypoints": [
-    "static/css/main.8e5d3cee.css",
-    "static/js/main.5402b9d1.js"
+    "static/css/main.00bbbb31.css",
+    "static/js/main.9c30e60c.js"
   ]
 }
