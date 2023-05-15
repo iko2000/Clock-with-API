@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Clock-with-API/static/css/main.00bbbb31.css",
-    "main.js": "/Clock-with-API/static/js/main.9c30e60c.js",
+    "main.js": "/Clock-with-API/static/js/main.f28b9674.js",
     "static/media/nighttime.jpg": "/Clock-with-API/static/media/nighttime.aa5161f57be5fd66b6a2.jpg",
     "static/media/daytime.jpg": "/Clock-with-API/static/media/daytime.22955f116d799eadf917.jpg",
     "static/media/SpaceMono-Bold.ttf": "/Clock-with-API/static/media/SpaceMono-Bold.2d0dbf42750207f78ffa.ttf",
@@ -11,10 +11,10 @@
     "static/media/arrowup.svg": "/Clock-with-API/static/media/arrowup.9f27dbc98aef9217ffedf9388f4088d5.svg",
     "static/media/arrowdown.svg": "/Clock-with-API/static/media/arrowdown.4d330a30a2190ce71512b306095fbf41.svg",
     "main.00bbbb31.css.map": "/Clock-with-API/static/css/main.00bbbb31.css.map",
-    "main.9c30e60c.js.map": "/Clock-with-API/static/js/main.9c30e60c.js.map"
+    "main.f28b9674.js.map": "/Clock-with-API/static/js/main.f28b9674.js.map"
   },
   "entrypoints": [
     "static/css/main.00bbbb31.css",
-    "static/js/main.9c30e60c.js"
+    "static/js/main.f28b9674.js"
   ]
 }
