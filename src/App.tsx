@@ -22,49 +22,25 @@ function App() {
   const [city, setCity] = useState("");
   const [ismorning, setIsmorning] = useState(true);
 
+
+ 
   let num = time.slice(0,2);
-
-  function generator(num: any) {
-    switch (num) {
-      case "07":
-        setIsmorning(true);
-        break;
-      case "05":
-        setIsmorning(true);
-        break;
-
-      case "06":
-        setIsmorning(true);
-        break;
-      case "08":
-        setIsmorning(true);
-        break;
-      case "09":
-        setIsmorning(true);
-        break;
-      case "10":
-        setIsmorning(true);
-        break;
-      case "11":
-        setIsmorning(true);
-        break;
-      case "12":
-        setIsmorning(true);
-        break;
-      case "13":
-        setIsmorning(true);
-        break;
-
-      default:
-        setIsmorning(false);
-    }
+  function setter(num:any) {
+  
+  if(Number(num) < 15 && Number(num) > 5) {
+    setIsmorning(true);
+  } else if (Number(num) >= 15) {
+    setIsmorning(false)
+  } else if(Number(num) <= 5){
+    setIsmorning(false);
   }
-
+  }
+  
   useEffect(() => {
+     setter(num)
     axios(`https://worldtimeapi.org/api/ip`)
       .then((response) => response.data)
       .then((data) => {
-        console.log(data);
         setData(data);
         let formatedtime = data.datetime.slice(11, 16);
         setTime(formatedtime);
@@ -74,15 +50,17 @@ function App() {
         setWeekpassed(data.week_number);
       })
       .catch(function (error) {
-        alert(error + "Show error notification!");
+        alert(error + "EROOR 404 NOT FOUND!");
       });
 
-    generator(num);
+     
+      
+  
 
     axios("https://ipapi.co/json/")
       .then((response) => response.data)
       .then((data) => {
-        console.log(data);
+       
         setCity(` ${data.city}, ${data.country_name}`);
       });
   }, []);
@@ -91,12 +69,11 @@ function App() {
     axios("https://api.quotable.io/quotes/random")
       .then((response) => response.data)
       .then((data) => {
-        console.log(data);
         setQuote(data[0].content);
         setAuthor(data[0].author);
       })
       .catch(function (error) {
-        alert(error + "Show error notification!");
+        alert(error + "EROOR 404 NOT FOUND!");
       });
   }, []);
 
