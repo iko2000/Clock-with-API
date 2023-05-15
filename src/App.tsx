@@ -1,6 +1,6 @@
 import { url } from "inspector";
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import down from "./assets/desktop/arrowdown.svg";
 import up from "./assets/desktop/arrowup.svg";
@@ -21,23 +21,26 @@ function App() {
   const [author, setAuthor] = useState("");
   const [city, setCity] = useState("");
   const [ismorning, setIsmorning] = useState(true);
-
-
- 
-  let num = time.slice(0,2);
-  function setter(num:any) {
   
-  if(Number(num) < 15 && Number(num) > 5) {
-    setIsmorning(true);
-  } else if (Number(num) >= 15) {
-    setIsmorning(false)
-  } else if(Number(num) <= 5){
-    setIsmorning(false);
+
+  function setter(num: any) {
+    if (Number(num) < 15 && Number(num) > 5) {
+      console.log("acces 1");
+      setIsmorning(true);
+      return;
+    } else if (Number(num) >= 15) {
+      console.log("first");
+      setIsmorning(false);
+      return;
+    } else if (Number(num) <= 5) {
+      console.log("sec");
+
+      setIsmorning(false);
+      return;
+    }
   }
-  }
-  
+
   useEffect(() => {
-     setter(num)
     axios(`https://worldtimeapi.org/api/ip`)
       .then((response) => response.data)
       .then((data) => {
@@ -48,19 +51,16 @@ function App() {
         setWeek(data.day_of_week);
         setYear(data.day_of_year);
         setWeekpassed(data.week_number);
+        setter(data.datetime.slice(11,13));
+       
       })
       .catch(function (error) {
         alert(error + "EROOR 404 NOT FOUND!");
       });
 
-     
-      
-  
-
     axios("https://ipapi.co/json/")
       .then((response) => response.data)
       .then((data) => {
-       
         setCity(` ${data.city}, ${data.country_name}`);
       });
   }, []);
